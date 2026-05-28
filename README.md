@@ -1,12 +1,18 @@
 # Open GitHub Remote
 
-Open the GitHub `origin` remote for the current repository in your browser, with an optional base path between owner and repo for enterprise setups.
+Open the GitHub `origin` remote for the current repository in your browser. Optionally insert a base path between owner and repo for enterprise-style URLs.
 
 ## Features
 
-- Open the `origin` remote in your default browser.
+- One-click open of the `origin` GitHub remote.
 - Status bar buttons for quick access.
 - Optional base path between owner and repo (example: `owner/basePath/repo`).
+
+## Requirements
+
+- The workspace folder must be a Git repository.
+- The repository must have a configured `origin` remote.
+- The `origin` remote must point to GitHub.
 
 ## Usage
 
@@ -24,21 +30,28 @@ Open the GitHub `origin` remote for the current repository in your browser, with
 - `$(repo) Open Remote`
 - `$(settings-gear) Set Base Path`
 
-## Base Path
-
-Some environments need an extra path segment between `owner` and `repo`.
-Example base path: `copilot-corp`
-
-### Result Example
-
-- Default: `https://github.com/owner/repo`
-- With base path: `https://github.com/owner/copilot-corp/repo`
-
 ## Settings
 
 - `openGithubRemote.basePath` (string, default: empty)
 
-## Build
+## Base Path Example
 
-- `npm run compile`
-- `npm run watch`
+- Default: `https://github.com/owner/repo`
+- With base path: `https://github.com/owner/copilot-corp/repo`
+
+## Troubleshooting
+
+### Unable to read origin remote
+
+- Run `git remote -v` to confirm `origin` exists.
+- If missing, set it with:
+	`git remote add origin https://github.com/OWNER/REPO.git`
+
+### Origin is not a GitHub URL
+
+- Ensure `origin` is a GitHub URL (SSH or HTTPS).
+
+## Development
+
+- Build: `npm run compile`
+- Watch: `npm run watch`
