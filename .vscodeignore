@@ -1,0 +1,8 @@
+.vscode/
+.github/
+node_modules/
+src/
+**/*.map
+**/*.ts
+.eslintrc.cjs
+.gitignore

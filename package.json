@@ -1,12 +1,15 @@
 {
   "publisher": "zambrin",
-  "repository": "",
-  "license": "",
-  "icon": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zambrinn/open-remote-repo-extension.git"
+  },
+  "license": "MIT",
+  "icon": "resources/icon.png",
   "name": "open-github-remote",
   "displayName": "Open GitHub Remote",
   "description": "Open the GitHub origin remote in your browser.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.90.0"
   },
