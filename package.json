@@ -1,0 +1,56 @@
+{
+  "publisher": "zambrin",
+  "repository": "",
+  "license": "",
+  "icon": "",
+  "name": "open-github-remote",
+  "displayName": "Open GitHub Remote",
+  "description": "Open the GitHub origin remote in your browser.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:openGithubRemote.open",
+    "onCommand:openGithubRemote.setBasePath",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "openGithubRemote.open",
+        "title": "Open GitHub Origin Remote"
+      },
+      {
+        "command": "openGithubRemote.setBasePath",
+        "title": "Set GitHub Base Path"
+      }
+    ],
+    "configuration": {
+      "title": "Open GitHub Remote",
+      "properties": {
+        "openGithubRemote.basePath": {
+          "type": "string",
+          "default": "",
+          "description": "Optional base path between github.com and owner/repo, e.g. 'copilot-corp'."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.4",
+    "eslint": "^9.7.0",
+    "@eslint/js": "^9.7.0",
+    "typescript-eslint": "^8.1.0"
+  }
+}
