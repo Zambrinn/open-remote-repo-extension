@@ -23,12 +23,15 @@ Open the GitHub `origin` remote for the current repository in your browser. Opti
 ### Commands
 
 - `Open GitHub Origin Remote`
+- `Open GitHub Current Branch`
+- `Compare Branches on GitHub`
 - `Set GitHub Base Path`
 
 ### Status Bar
 
 - `$(repo) Open Remote`
-- `$(settings-gear) Set Base Path`
+- `$(git-branch) Open Branch`
+- `$(git-compare) Compare Branches`
 
 ## Settings
 

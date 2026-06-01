@@ -9,7 +9,7 @@
   "name": "open-github-remote",
   "displayName": "Open GitHub Remote",
   "description": "Open the GitHub origin remote in your browser.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -18,6 +18,8 @@
   ],
   "activationEvents": [
     "onCommand:openGithubRemote.open",
+    "onCommand:openGithubRemote.openBranch",
+    "onCommand:openGithubRemote.compareBranches",
     "onCommand:openGithubRemote.setBasePath",
     "onStartupFinished"
   ],
@@ -27,6 +29,14 @@
       {
         "command": "openGithubRemote.open",
         "title": "Open GitHub Origin Remote"
+      },
+      {
+        "command": "openGithubRemote.openBranch",
+        "title": "Open GitHub Current Branch"
+      },
+      {
+        "command": "openGithubRemote.compareBranches",
+        "title": "Compare Branches on GitHub"
       },
       {
         "command": "openGithubRemote.setBasePath",
